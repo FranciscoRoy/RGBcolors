@@ -1,1 +1,86 @@
-<p>evaluar works!</p>
+<!--
+<div class="mostrar-valores-checkbox">
+    <label>
+      <input type="checkbox" [(ngModel)]="mostrarValores" />
+      Mostrar valores
+    </label>
+  </div>
+-->
+
+<div [style.backgroundColor]="colorActual"
+     style="width: 200px; height: 200px; border: 2px solid black; margin-bottom: 1rem;">
+</div>
+
+<button (click)="siguienteColor()">Comparar otro par</button>
+
+  
+<div class="mezclar-container">
+
+    <div class="mezclar-superior">
+      
+        <div class="mezclar-color" id="color-rojo">
+            <p>Rojo</p>
+
+            <div class="niveles">
+                <div
+                *ngFor="let encendido of getNivelArray(rojo); let i = index"
+                [class.activorojo]="encendido"
+                class="nivel"></div>
+            </div>
+            
+            <div class="botones">
+                <button class="boton" (click)="quitarLuz('rojo')">-</button>
+                <button class="boton" (click)="agregarLuz('rojo')">+</button>
+            </div>
+
+      </div>
+      
+      <div class="mezclar-color" id="color-verde">
+            <p>Verde</p>
+
+            <div class="niveles">
+                <div
+                *ngFor="let encendido of getNivelArray(verde); let i = index"
+                [class.activoverde]="encendido"
+                class="nivel">
+                </div>
+            </div>
+
+            <div class="botones">
+                <button class="boton" (click)="quitarLuz('verde')">-</button>
+                <button class="boton" (click)="agregarLuz('verde')">+</button>
+            </div>
+
+      </div>
+      
+      <div class="mezclar-color" id="color-azul">
+            <p>Azul</p>
+
+            <div class="niveles">
+                <div
+                *ngFor="let encendido of getNivelArray(azul); let i = index"
+                [class.activoazul]="encendido"
+                class="nivel">
+                </div>
+            </div>
+
+            <div class="botones">
+                <button class="boton" (click)="quitarLuz('azul')">-</button>
+                <button class="boton" (click)="agregarLuz('azul')">+</button>
+            </div>
+      </div>
+
+    </div>
+  
+    <div class="mezclar-inferior">
+
+      <div class="color-resultado" [ngStyle]="{ 'background-color': colorResultado }">
+      </div>
+      
+    </div>
+    
+<div>
+    <p [ngStyle]="{color: mensajeColor}">{{ mensaje }}</p>
+</div>
+
+</div>

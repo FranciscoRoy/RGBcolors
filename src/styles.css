@@ -40,7 +40,7 @@
     width: 50%;
     height: 75%;
     border-radius: 12px;
-    border: 2px solid #ad2020;
+    border: 2px solid #000000;
   }
 
 
@@ -81,7 +81,7 @@
 .valores-numericos {
   margin-top: 5px;
   font-weight: bold;
-  color: #333;
+  color: #000000;
   text-align: center;
 }
 
@@ -90,4 +90,9 @@
   font-weight: bold;
   font-size: 1.2rem;
   text-align: center;
+}
+
+.boton {
+  font-size: 32px;
+  padding: 12px 24px;
 }
