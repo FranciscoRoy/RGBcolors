@@ -50,12 +50,14 @@ export class EvaluarComponent implements OnInit{
     if (color === 'rojo' && this.rojo < 8) this.rojo++;
     if (color === 'verde' && this.verde < 8) this.verde++;
     if (color === 'azul' && this.azul < 8) this.azul++;
+    this.compararColores();
   }
 
   quitarLuz(color: string): void {
     if (color === 'rojo' && this.rojo > 0) this.rojo--;
     if (color === 'verde' && this.verde > 0) this.verde--;
     if (color === 'azul' && this.azul > 0) this.azul--;
+    this.compararColores();
   }
 
   getNivelArray(nivel: number): boolean[] {
@@ -76,7 +78,9 @@ export class EvaluarComponent implements OnInit{
   }
 
   normalizarRGB(rgb: string): string {
-    return rgb.replace(/\s+/g, '').toLowerCase();
+    let color = rgb.replace(/\s+/g, '').toLowerCase(); 
+    console.log(color);
+    return color; 
   }
 
 }
