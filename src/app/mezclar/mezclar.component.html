@@ -1,0 +1,77 @@
+<!--
+<div class="mostrar-valores-checkbox">
+    <label>
+      <input type="checkbox" [(ngModel)]="mostrarValores" />
+      Mostrar valores
+    </label>
+  </div>
+-->
+  
+  <div class="mezclar-container">
+
+    <div class="mezclar-superior">
+      
+        <div class="mezclar-color" id="color-rojo">
+            <p>Rojo</p>
+
+            <div class="niveles">
+                <div
+                *ngFor="let encendido of getNivelArray(rojo); let i = index"
+                [class.activorojo]="encendido"
+                class="nivel"></div>
+            </div>
+            
+            <div class="botones">
+                <button (click)="quitarLuz('rojo')">-</button>
+                <button (click)="agregarLuz('rojo')">+</button>
+            </div>
+
+      </div>
+      
+      <div class="mezclar-color" id="color-verde">
+            <p>Verde</p>
+
+            <div class="niveles">
+                <div
+                *ngFor="let encendido of getNivelArray(verde); let i = index"
+                [class.activoverde]="encendido"
+                class="nivel">
+                </div>
+            </div>
+
+            <div class="botones">
+                <button (click)="quitarLuz('verde')">-</button>
+                <button (click)="agregarLuz('verde')">+</button>
+            </div>
+
+      </div>
+      
+      <div class="mezclar-color" id="color-azul">
+            <p>Azul</p>
+
+            <div class="niveles">
+                <div
+                *ngFor="let encendido of getNivelArray(azul); let i = index"
+                [class.activoazul]="encendido"
+                class="nivel">
+                </div>
+            </div>
+
+            <div class="botones">
+                <button (click)="quitarLuz('azul')">-</button>
+                <button (click)="agregarLuz('azul')">+</button>
+            </div>
+      </div>
+
+    </div>
+  
+    <div class="mezclar-inferior">
+
+      <div class="color-resultado" [ngStyle]="{ 'background-color': colorResultado }">
+      </div>
+      
+    </div>
+    
+
+</div>
+  

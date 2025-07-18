@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'mezclarcolores';
+  title = 'Conociendo el esquema RGB';
+
+  constructor(private router: Router) {}
+
+  irA(ruta: string) {
+    this.router.navigate([`/${ruta}`]);
+  }
 }

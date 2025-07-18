@@ -1,0 +1,25 @@
+<!--
+<div class="mezclar-inferior">
+
+    <div class="color-resultado" [ngStyle]="{ 'background-color': colorA }">
+    </div>
+    
+</div>
+
+    <div class="mezclar-inferior">
+
+    <div class="color-resultado" [ngStyle]="{ 'background-color': colorB }">
+    </div>
+    
+</div>
+-->
+
+<div [style.backgroundColor]="colorActual_1"
+     style="width: 200px; height: 200px; border: 2px solid black; margin-bottom: 1rem;">
+</div>
+
+<div [style.backgroundColor]="colorActual_2"
+     style="width: 200px; height: 200px; border: 2px solid black; margin-bottom: 1rem;">
+</div>
+
+<button (click)="siguienteColor()">Comparar otro par</button>
